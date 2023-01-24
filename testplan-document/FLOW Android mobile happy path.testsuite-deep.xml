@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="45631" name="FLOW Android mobile happy path" >
+<node_order><![CDATA[8]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="45633" name="Setup and verify the flow connection server">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[6362]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	To setup and verify the connection server</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	- To have a mobile MC33 or emaluator with Android 8.1<br />
+	- To have the application material flow installed in the devices or emulator<br />
+	- To have the FLOW server up&nbsp;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as setup user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the configuration area with the server address, inactivity time (minutes) fields and show debug logs option</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Changes the server address to the QA server enable and clink the [i] icon to verify the connection</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-If the server path is correct the application display the message:<br />
+	&quot;Server validate sucessful&quot; and the [i] icon changes to check icon</p>
+<p>
+	-If the server path is not correct the application displays the message: &quot;invalid server&quot;&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Check/uncheck the show debug logs&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	- If the checkbox is checked the&quot; show debug logs&quot; the application can save the logs of the application in the device</p>
+<p>
+	- If the checkbox is not checked the&quot; show debug logs&quot; the application cannot save the logs of the application in the device</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Click the SAVE button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The aplication should save the changes and go back to the login area</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45640" name="Verify the search option in the asset area">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[6363]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click in the asset option&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display a message for scan process:<br />
+	&quot;Please proceed to scan a Asset Code or close this dialog to pick one from the list.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click the &quot;OK&quot; button in the message opened for scan process</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Click in the lens icon&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should open the search area, wirh the fields like Tag ID#, Asset ID, Keyword and the button SEARCH</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Filter asset by the option by Tag ID#, Asset ID, Keyword</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	- All the fields should be work indiviual or combine the fields.</p>
+<p>
+	- If the search match a element the application show the &quot;asset ID&quot;</p>
+<p>
+	- If the search goesn&#39;t mach any element the application display the message &quot;Nothing found to display&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45648" name="Verify the search option in part routes area">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[6364]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	To verify the the search functionality in the part routes</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click in the Part Route option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display a message &quot;Please proceed to scan a new part route or close this dialog to pick one from the list&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click the &quot;OK&quot;&nbsp; option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display a list of part routes created</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Click in the lens icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The aplicacion should display the fields like:<br />
+	- Part# : prefix, base, suffix<br />
+	- tag ID #<br />
+	- PR#<br />
+	-Keyword</p>
+<p>
+	and the button SEARCH</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Filter a part route by prefix, base, suffix.<br />
+	- Tag ID #<br />
+	- PR# (part route number)<br />
+	- Key word</p>
+<p>
+	&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The filters could be search a part route&nbsp;individually or combined the fields.</p>
+<p>
+	- If the search fould parts route according the filters, the application should display all the part route that have similimar element search in the fields.</p>
+<p>
+	- if the search doesn&#39;t match any element the application displays the message &quot;Nothing found to display&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45656" name="Verify the request option in the part routes area">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[6365]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	to verify if the user can do a request part from the Flow mobile</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	he application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click the Par Routes option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	the application goes to Part routes and display a message for the scan process&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click the OK button from the message</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Search a part form the list and click it&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should open the part, showing its information like.&nbsp;</p>
+<p>
+	- PR#<br />
+	-Part#<br />
+	- Std Pack Name<br />
+	- Std PAck Qty<br />
+	-Description<br />
+	- Tag id#<br />
+	- Trigger Location<br />
+	- Instructions</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Click the box icon in the down site to make a request&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display the message &quot;Request, Do you want to perform the Material Requesr for this Part route&quot; with the option Cancel/OK</p>
+<p>
+	If the Cancel button is press the application go back to the Part route details<br />
+	If the OK button is press the application make a request of the part route&nbsp;</p>
+<p>
+	If the part route is not configurated correctly the application display the message &quot;There was a problem requesting Part Route, please try again or check the server address&quot;</p>
+<p>
+	If the part route is&nbsp;configurated correctly the part route should be requested and the application display the message &quot;Material requested successful&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45664" name="Verify the assign route to the user by Route Selection">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[6366]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	to veryf the assign route to the user to pick and delivery a part</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Select the option route selection&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should go to the route selection area to select a route type</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Select a route type from the dropdown &quot;my current assigned routes&quot; and select a route type</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	the application should display the routes create on this route type.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Select/check a route from the list and click the save button icon</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display the messages &quot;The record was updated successfully&quot; , &quot;the request has succeeded&quot;</p>
+<p>
+	The route should be assigned to the user and it should be displayed in the list of routes.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45671" name="Verify the Material pick process with part routes requested">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[6367]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	To verify the pick process material pick process</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click the material pick option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display all the parts requested according the routes assigned in part routes area</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	From the list select a part and click the &quot;next request&quot; option or the &quot;delivery without scan&quot;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	- When the user click the &quot;next request&quot; option the part goes to the &quot;Pick Request Part&quot; area, to verify the data and scan the requeriments data as: Part, Lot#, Vendor#</p>
+<p>
+	- when the user click the &quot;delivey without scan&quot; option the application goes to the delivery area without scan any data.&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	From the &quot;Pick request part&quot; area the user can:<br />
+	- CANCEL the pick part<br />
+	- Report the part as EXCEPTION or PARTIAL EXCEPTION<br />
+	- Continue with the PICK process: pick the next part if it is not a bulk package<br />
+	- Scan the requemients data.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	If the user:<br />
+	- CANCEL the pick part , the part goes to the pick material list<br />
+	- put the part as EXCEPTION the part goes to EXCEPTION area and the pick process is finished<br />
+	- put the part as PARTIAL EXCEPTION the the parts as exception goes to exception area and the others parts contine the pick process<br />
+	- Click the NEXT REQUEST button, the user can pick the next part if it is not a bulk package</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Continue with the pick process, clicking the NEXT REQUEST button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	when the route doesn&#39;t have any more part on the list the application display the message: &quot;Attetion, No more Material Requests for Route(s). Please begin Delivery process by clicking &#39;begin delivery&#39;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	Click the &quot;Begin delivery&quot; option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The parts should go to material delivery area</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45680" name="Verify the delivery process of a part in material delivery area">
+	<node_order><![CDATA[1006]]></node_order>
+	<externalid><![CDATA[6368]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	To verify the delivery process of a part in delivery area</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+<div>
+	- To have parts in the delivery area</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	-The application should open and display the login and password options</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Click the material delivery option</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should open the material delivery area.</p>
+<p>
+	- if the area doesn&#39;t have any part in delivery the application should display the message: &quot;Nothing found to display&quot;</p>
+<p>
+	- if the area have part in delivery, the application should display the part in a list.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Select a part from the list checking the checkbox&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Click the button begin delivery (play icon)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	&nbsp;The application goes to the &quot;Delivery Request Part&quot; area with the part information like:<br />
+	- part#, Description, Quantity, To location, LS#, Gen. Instructions nad the option to scan a part to be validate.</p>
+<p>
+	- If the part is bulk package the application display a warning message: &quot;Please note, this part has a bulk package type&quot;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Click the delivery without scan option (check yellow icon)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	- The delivery without scan the user can delivery the part with out a scan.<br />
+	- The part complete the pick/delivery process.<br />
+	- The application goes to the material delivery area.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45688" name="Logout mobile flow application">
+	<node_order><![CDATA[1007]]></node_order>
+	<externalid><![CDATA[6369]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	To verify the log out of a user from the application</p>
+]]></summary>
+	<preconditions><![CDATA[<div>
+	- To have a mobile MC33 or emaluator with Android 8.1</div>
+<div>
+	- To have the application material flow installed in the devices or emulator</div>
+<div>
+	- To have the FLOW server up</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Open the mobile application material Flow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	-The application should open and display the login and password options</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Login to the application as admin user</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	-The application should display the differents areas added in the mobile like: asset, part routes, route selection, scan to pick, material pick, material delivery, exceptions, logout</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Select the option logout</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display a message,&quot; Are you sure to log out ?&quot; with two options&nbsp; Cancel/ok</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Click the YES button&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application goes back to the material flow login/password</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite>
