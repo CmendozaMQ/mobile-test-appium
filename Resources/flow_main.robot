@@ -34,7 +34,7 @@ Login to the application as "${setup}""${none}"
 
 Click login button
 	Click Element    ${id-login-button}
-    Sleep   3
+    Sleep   5
 
 Configure flow server 
 	Clear Text    ${id-server-address}
@@ -50,7 +50,7 @@ Click asset area
 
 Click ok to scan option message
 	Click Element    ${id-assets-ok}
-	Sleep   3
+	Sleep   5
 
 Click search button
 	Click Element    ${id-search-button}
