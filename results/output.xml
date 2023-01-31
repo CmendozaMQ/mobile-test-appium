@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20230131 15:49:30.590" rpa="false">
+<suite id="s1" name="Automation-test-mobile" source="C:\mobile-test-appium\Automation-test-mobile">
+<suite id="s1-s1" name="01 Setup configuration" source="C:\mobile-test-appium\Automation-test-mobile\01_Setup_configuration.robot">
+<test id="s1-s1-t1" name="verify the a element from asset area">
+<kw name="Mobile flow configuration" library="flow_main">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=8.1</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>automationName=appium</arg>
+<arg>appPackage=com.zebra.materialflow</arg>
+<arg>appActivity=com.newvisiondata.flow.home.MainActivity</arg>
+</arguments>
+<status status="PASS" starttime="20230131 15:49:30.922" endtime="20230131 15:49:43.121"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:30.922" endtime="20230131 15:49:43.122"></status>
+</kw>
+<kw name="Login to the application as &quot;setup&quot;&quot;none&quot;" library="flow_main">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-username}</arg>
+<arg>${setup}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:43.125" level="INFO">Typing text 'setup' into text field 'id=com.zebra.materialflow:id/editTextEmail'</msg>
+<msg timestamp="20230131 15:49:44.631" level="INFO">criteria is com.zebra.materialflow:id/editTextEmail</msg>
+<status status="PASS" starttime="20230131 15:49:43.123" endtime="20230131 15:49:44.631"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-password}</arg>
+<arg>${none}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:44.632" level="INFO">Typing text 'none' into text field 'id=com.zebra.materialflow:id/editTextPassword'</msg>
+<msg timestamp="20230131 15:49:45.682" level="INFO">criteria is com.zebra.materialflow:id/editTextPassword</msg>
+<status status="PASS" starttime="20230131 15:49:44.631" endtime="20230131 15:49:45.682"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:43.122" endtime="20230131 15:49:45.682"></status>
+</kw>
+<kw name="Click login button" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-login-button}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:45.685" level="INFO">Clicking element 'id=com.zebra.materialflow:id/buttonLogin'.</msg>
+<msg timestamp="20230131 15:49:46.225" level="INFO">criteria is com.zebra.materialflow:id/buttonLogin</msg>
+<status status="PASS" starttime="20230131 15:49:45.684" endtime="20230131 15:49:46.225"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230131 15:49:51.238" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230131 15:49:46.225" endtime="20230131 15:49:51.238"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:45.682" endtime="20230131 15:49:51.238"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230131 15:49:53.253" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230131 15:49:51.238" endtime="20230131 15:49:53.253"></status>
+</kw>
+<kw name="Configure flow server" library="flow_main">
+<kw name="Clear Text" library="AppiumLibrary">
+<doc>Clears the text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-server-address}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:53.255" level="INFO">Clear text field 'id=com.zebra.materialflow:id/editTextServerAddress'</msg>
+<msg timestamp="20230131 15:49:53.312" level="INFO">criteria is com.zebra.materialflow:id/editTextServerAddress</msg>
+<status status="PASS" starttime="20230131 15:49:53.254" endtime="20230131 15:49:53.312"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-server-address}</arg>
+<arg>http://10.0.0.23:8080/flow</arg>
+</arguments>
+<msg timestamp="20230131 15:49:53.314" level="INFO">Typing text 'http://10.0.0.23:8080/flow' into text field 'id=com.zebra.materialflow:id/editTextServerAddress'</msg>
+<msg timestamp="20230131 15:49:54.363" level="INFO">criteria is com.zebra.materialflow:id/editTextServerAddress</msg>
+<status status="PASS" starttime="20230131 15:49:53.312" endtime="20230131 15:49:54.363"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:53.254" endtime="20230131 15:49:54.363"></status>
+</kw>
+<kw name="Click save button" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-save-button}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:54.365" level="INFO">Clicking element 'id=com.zebra.materialflow:id/buttonSaveServerAddress'.</msg>
+<msg timestamp="20230131 15:49:54.908" level="INFO">criteria is com.zebra.materialflow:id/buttonSaveServerAddress</msg>
+<status status="PASS" starttime="20230131 15:49:54.363" endtime="20230131 15:49:54.908"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230131 15:49:56.910" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230131 15:49:54.908" endtime="20230131 15:49:56.910"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:54.363" endtime="20230131 15:49:56.910"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:30.921" endtime="20230131 15:49:56.911" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230131 15:49:30.616" endtime="20230131 15:49:56.912"></status>
+</suite>
+<suite id="s1-s2" name="02 Login application" source="C:\mobile-test-appium\Automation-test-mobile\02_Login_application.robot">
+<test id="s1-s2-t1" name="verify the a element from asset area">
+<kw name="Login to the application as &quot;zebra&quot;&quot;z3bran0n3&quot;" library="flow_main">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-username}</arg>
+<arg>${setup}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:56.920" level="INFO">Typing text 'zebra' into text field 'id=com.zebra.materialflow:id/editTextEmail'</msg>
+<msg timestamp="20230131 15:49:57.493" level="INFO">criteria is com.zebra.materialflow:id/editTextEmail</msg>
+<status status="PASS" starttime="20230131 15:49:56.919" endtime="20230131 15:49:57.493"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-password}</arg>
+<arg>${none}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:57.494" level="INFO">Typing text 'z3bran0n3' into text field 'id=com.zebra.materialflow:id/editTextPassword'</msg>
+<msg timestamp="20230131 15:49:58.529" level="INFO">criteria is com.zebra.materialflow:id/editTextPassword</msg>
+<status status="PASS" starttime="20230131 15:49:57.493" endtime="20230131 15:49:58.529"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:56.919" endtime="20230131 15:49:58.529"></status>
+</kw>
+<kw name="Click login button" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-login-button}</arg>
+</arguments>
+<msg timestamp="20230131 15:49:58.530" level="INFO">Clicking element 'id=com.zebra.materialflow:id/buttonLogin'.</msg>
+<msg timestamp="20230131 15:49:59.063" level="INFO">criteria is com.zebra.materialflow:id/buttonLogin</msg>
+<status status="PASS" starttime="20230131 15:49:58.529" endtime="20230131 15:49:59.063"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230131 15:50:04.077" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230131 15:49:59.063" endtime="20230131 15:50:04.077"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:58.529" endtime="20230131 15:50:04.077"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:49:56.918" endtime="20230131 15:50:04.078" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230131 15:49:56.912" endtime="20230131 15:50:04.079"></status>
+</suite>
+<suite id="s1-s3" name="03 Asset mobile area" source="C:\mobile-test-appium\Automation-test-mobile\03_Asset_mobile_area.robot">
+<test id="s1-s3-t1" name="verify the a element from asset area">
+<kw name="Click asset area" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-assets-area}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:04.089" level="INFO">Clicking element '//android.widget.TextView[@text="Assets"]'.</msg>
+<msg timestamp="20230131 15:50:04.631" level="INFO">xpath criteria: //android.widget.TextView[@text="Assets"]</msg>
+<status status="PASS" starttime="20230131 15:50:04.088" endtime="20230131 15:50:04.631"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230131 15:50:07.641" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230131 15:50:04.631" endtime="20230131 15:50:07.641"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:04.087" endtime="20230131 15:50:07.641"></status>
+</kw>
+<kw name="Click ok to scan option message" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-assets-ok}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:07.643" level="INFO">Clicking element '//android.widget.TextView[@text="OK"]'.</msg>
+<msg timestamp="20230131 15:50:07.714" level="INFO">xpath criteria: //android.widget.TextView[@text="OK"]</msg>
+<status status="PASS" starttime="20230131 15:50:07.642" endtime="20230131 15:50:07.714"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20230131 15:50:12.719" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230131 15:50:07.714" endtime="20230131 15:50:12.719"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:07.642" endtime="20230131 15:50:12.719"></status>
+</kw>
+<kw name="Click search button" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-search-button}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:12.722" level="INFO">Clicking element 'id=com.zebra.materialflow:id/toolbarIconSearch'.</msg>
+<msg timestamp="20230131 15:50:12.783" level="INFO">criteria is com.zebra.materialflow:id/toolbarIconSearch</msg>
+<status status="PASS" starttime="20230131 15:50:12.720" endtime="20230131 15:50:12.783"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230131 15:50:13.792" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230131 15:50:12.784" endtime="20230131 15:50:13.792"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:12.720" endtime="20230131 15:50:13.792"></status>
+</kw>
+<kw name="Search element &quot;04-02-0024&quot; by keyword field" library="flow_main">
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${id-text-keyword}</arg>
+<arg>${asset_element}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:13.794" level="INFO">Typing text '04-02-0024' into text field 'id=com.zebra.materialflow:id/editTextKeyword'</msg>
+<msg timestamp="20230131 15:50:14.361" level="INFO">criteria is com.zebra.materialflow:id/editTextKeyword</msg>
+<status status="PASS" starttime="20230131 15:50:13.792" endtime="20230131 15:50:14.361"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230131 15:50:15.376" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230131 15:50:14.361" endtime="20230131 15:50:15.376"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:13.792" endtime="20230131 15:50:15.376"></status>
+</kw>
+<kw name="Click search button in asset area" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${id-search-button-assets}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:15.378" level="INFO">Clicking element 'id=com.zebra.materialflow:id/buttonStartSearch'.</msg>
+<msg timestamp="20230131 15:50:15.462" level="INFO">criteria is com.zebra.materialflow:id/buttonStartSearch</msg>
+<status status="PASS" starttime="20230131 15:50:15.377" endtime="20230131 15:50:15.462"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230131 15:50:16.476" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230131 15:50:15.462" endtime="20230131 15:50:16.476"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:15.377" endtime="20230131 15:50:16.476"></status>
+</kw>
+<kw name="Verify the element &quot;04-02-0024&quot;" library="flow_main">
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is enabled.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text="${asset_element}"]</arg>
+</arguments>
+<msg timestamp="20230131 15:50:16.592" level="INFO">Element '//android.widget.TextView[@text="04-02-0024"]' is enabled .</msg>
+<msg timestamp="20230131 15:50:16.592" level="INFO">xpath criteria: //android.widget.TextView[@text="04-02-0024"]</msg>
+<status status="PASS" starttime="20230131 15:50:16.477" endtime="20230131 15:50:16.592"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:16.477" endtime="20230131 15:50:16.592"></status>
+</kw>
+<kw name="Click asset element &quot;04-02-0024&quot;" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text="${asset_element}"]</arg>
+</arguments>
+<msg timestamp="20230131 15:50:16.594" level="INFO">Clicking element '//android.widget.TextView[@text="04-02-0024"]'.</msg>
+<msg timestamp="20230131 15:50:16.679" level="INFO">xpath criteria: //android.widget.TextView[@text="04-02-0024"]</msg>
+<status status="PASS" starttime="20230131 15:50:16.592" endtime="20230131 15:50:16.679"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230131 15:50:18.683" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230131 15:50:16.680" endtime="20230131 15:50:18.683"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:16.592" endtime="20230131 15:50:18.683"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230131 15:50:20.684" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230131 15:50:18.683" endtime="20230131 15:50:20.684"></status>
+</kw>
+<kw name="Verify asset element data &quot;Mag Rack&quot; &quot;04-02-0024&quot; &quot;ASRS&quot;" library="flow_main">
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is enabled.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text="Mag Rack"]</arg>
+</arguments>
+<msg timestamp="20230131 15:50:20.782" level="INFO">Element '//android.widget.TextView[@text="Mag Rack"]' is enabled .</msg>
+<msg timestamp="20230131 15:50:20.782" level="INFO">xpath criteria: //android.widget.TextView[@text="Mag Rack"]</msg>
+<status status="PASS" starttime="20230131 15:50:20.685" endtime="20230131 15:50:20.782"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is enabled.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text="04-02-0024"]</arg>
+</arguments>
+<msg timestamp="20230131 15:50:20.875" level="INFO">Element '//android.widget.TextView[@text="04-02-0024"]' is enabled .</msg>
+<msg timestamp="20230131 15:50:20.875" level="INFO">xpath criteria: //android.widget.TextView[@text="04-02-0024"]</msg>
+<status status="PASS" starttime="20230131 15:50:20.782" endtime="20230131 15:50:20.875"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<doc>Verifies that element identified with locator is enabled.</doc>
+<arguments>
+<arg>//android.widget.TextView[@text="ASRS"]</arg>
+</arguments>
+<msg timestamp="20230131 15:50:20.957" level="INFO">Element '//android.widget.TextView[@text="ASRS"]' is enabled .</msg>
+<msg timestamp="20230131 15:50:20.957" level="INFO">xpath criteria: //android.widget.TextView[@text="ASRS"]</msg>
+<status status="PASS" starttime="20230131 15:50:20.875" endtime="20230131 15:50:20.957"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:20.685" endtime="20230131 15:50:20.957"></status>
+</kw>
+<kw name="Click 3 lines icon" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${arrow-3lines-icon}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:20.959" level="INFO">Clicking element 'id=com.zebra.materialflow:id/toolbarPrimaryIcon'.</msg>
+<msg timestamp="20230131 15:50:21.035" level="INFO">criteria is com.zebra.materialflow:id/toolbarPrimaryIcon</msg>
+<status status="PASS" starttime="20230131 15:50:20.958" endtime="20230131 15:50:21.035"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230131 15:50:22.037" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230131 15:50:21.035" endtime="20230131 15:50:22.037"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:20.957" endtime="20230131 15:50:22.037"></status>
+</kw>
+<kw name="Click 3 lines icon" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${arrow-3lines-icon}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:22.039" level="INFO">Clicking element 'id=com.zebra.materialflow:id/toolbarPrimaryIcon'.</msg>
+<msg timestamp="20230131 15:50:22.086" level="INFO">criteria is com.zebra.materialflow:id/toolbarPrimaryIcon</msg>
+<status status="PASS" starttime="20230131 15:50:22.038" endtime="20230131 15:50:22.087"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230131 15:50:23.096" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230131 15:50:22.087" endtime="20230131 15:50:23.096"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:22.038" endtime="20230131 15:50:23.096"></status>
+</kw>
+<kw name="Click main menu" library="flow_main">
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${main-menu-home}</arg>
+</arguments>
+<msg timestamp="20230131 15:50:23.098" level="INFO">Clicking element '//android.widget.CheckedTextView[@text="Home"]'.</msg>
+<msg timestamp="20230131 15:50:23.234" level="INFO">xpath criteria: //android.widget.CheckedTextView[@text="Home"]</msg>
+<status status="PASS" starttime="20230131 15:50:23.097" endtime="20230131 15:50:23.234"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:23.097" endtime="20230131 15:50:23.235"></status>
+</kw>
+<status status="PASS" starttime="20230131 15:50:04.087" endtime="20230131 15:50:23.235" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230131 15:50:04.081" endtime="20230131 15:50:23.237"></status>
+</suite>
+<status status="PASS" starttime="20230131 15:49:30.592" endtime="20230131 15:50:23.239"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Automation-test-mobile">Automation-test-mobile</stat>
+<stat pass="1" fail="0" id="s1-s1" name="01 Setup configuration">Automation-test-mobile.01 Setup configuration</stat>
+<stat pass="1" fail="0" id="s1-s2" name="02 Login application">Automation-test-mobile.02 Login application</stat>
+<stat pass="1" fail="0" id="s1-s3" name="03 Asset mobile area">Automation-test-mobile.03 Asset mobile area</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
