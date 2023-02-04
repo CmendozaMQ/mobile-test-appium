@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="45696" name="Rest API Video Games" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="45725" name="PUT video game by GameId">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[8]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Returns a video game from the DB</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	To have&nbsp;&nbsp;Video Game Database - Test Application running</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Create a session to VideoGamesDB</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Create a PUTsession to app/videogames/{videoGameId}</p>
+<p>
+	Parameters: videoGameId<br />
+	Value: 1<br />
+	Data Type: integer</p>
+<p>
+	Send the body parameters</p>
+<div>
+	VideoGame {</div>
+<div>
+	id (integer, optional),</div>
+<div>
+	name (string, optional),</div>
+<div>
+	releaseDate (string, optional),</div>
+<div>
+	reviewScore (integer, optional),</div>
+<div>
+	category (string, optional),</div>
+<div>
+	rating (string, optional)</div>
+<div>
+	}</div>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The request should return the {videoGameId}</p>
+<div>
+	<div>
+		Response Body</div>
+	<div>
+		&nbsp;</div>
+	<div>
+		<div>
+			VideoGame {</div>
+		<div>
+			id (integer, optional),</div>
+		<div>
+			name (string, optional),</div>
+		<div>
+			releaseDate (string, optional),</div>
+		<div>
+			reviewScore (integer, optional),</div>
+		<div>
+			category (string, optional),</div>
+		<div>
+			rating (string, optional)</div>
+		<div>
+			}<br />
+			&nbsp;</div>
+	</div>
+</div>
+<div>
+	The Response code should be 200</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the game id is not in the DB the application display a error 500</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the game id is invalid display the error 404</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45717" name="GET video game by GameId">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[6]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Returns a video game from the DB</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	To have&nbsp;&nbsp;Video Game Database - Test Application running</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Create a session to VideoGamesDB</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Create a GET session to app/videogames/{videoGameId}</p>
+<p>
+	Parameters: videoGameId<br />
+	Value: 1<br />
+	Data Type: integer</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The request should return the {videoGameId}</p>
+<div>
+	<div>
+		VideoGame {</div>
+	<div>
+		id (integer, optional),</div>
+	<div>
+		name (string, optional),</div>
+	<div>
+		releaseDate (string, optional),</div>
+	<div>
+		reviewScore (integer, optional),</div>
+	<div>
+		category (string, optional),</div>
+	<div>
+		rating (string, optional)</div>
+	<div>
+		}</div>
+</div>
+<div>
+	&nbsp;</div>
+<div>
+	The Response code should be 200</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the game id is not in the DB the application display a error 500<br />
+	<br />
+	If the game id is invalid display the error 404</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45705" name="DELETE video games">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Add a new video game to the DB</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	To have&nbsp;&nbsp;Video Game Database - Test Application running</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Create a session to VideoGamesDB</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Create a DELETE session to app/videogames/{videoGameId} to delete a video game with those parameters:</p>
+<div>
+	Parameter: VideoGameId<br />
+	Value example: 6</div>
+<div>
+	Data type: integer&nbsp;&nbsp;</div>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should add a new video game to the DB</p>
+<div>
+	The Response code should be 200</div>
+<div>
+	&nbsp;</div>
+<div>
+	The response body should be :&nbsp;{&quot;status&quot;: &quot;Record Added Successfully&quot;}</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the parametres are incorrect the application display a error 400</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the item was already added the application display error 500<br />
+	<br />
+	If the game id is invalid display the error 404</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45701" name="POST video games">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Add a new video game to the DB</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	To have&nbsp;&nbsp;Video Game Database - Test Application running</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Create a session to VideoGamesDB</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Create a POST session to app/videogames/ to add a new video game with those parameters:</p>
+<div>
+	VideoGame {</div>
+<div>
+	id (integer, optional),</div>
+<div>
+	name (string, optional),</div>
+<div>
+	releaseDate (string, optional),</div>
+<div>
+	reviewScore (integer, optional),</div>
+<div>
+	category (string, optional),</div>
+<div>
+	rating (string, optional)</div>
+<div>
+	}</div>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should add a new video game to the DB</p>
+<div>
+	The Response code should be 200</div>
+<div>
+	&nbsp;</div>
+<div>
+	The response body should be :&nbsp;{&quot;status&quot;: &quot;Record Added Successfully&quot;}</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the parametres are incorrect the application display a error 400</div>
+<div>
+	&nbsp;</div>
+<div>
+	If the item was already added the application display error 500<br />
+	<br />
+	If the game id is invalid display the error 404</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="45697" name="GET video games">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[1]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Returns all the videos games in the DB</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	To have&nbsp;&nbsp;Video Game Database - Test Application running</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Create a session to VideoGamesDB</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Create a GET session to app/videogames</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The application should display all games in JSON format like:</p>
+<div>
+	VideoGame {</div>
+<div>
+	id (integer, optional),</div>
+<div>
+	name (string, optional),</div>
+<div>
+	releaseDate (string, optional),</div>
+<div>
+	reviewScore (integer, optional),</div>
+<div>
+	category (string, optional),</div>
+<div>
+	rating (string, optional)</div>
+<div>
+	}</div>
+<div>
+	&nbsp;</div>
+<div>
+	The Response code should be 200</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>
